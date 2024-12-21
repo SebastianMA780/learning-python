@@ -25,3 +25,7 @@ print(numbers_tuple_format)
 print(type(numbers_tuple_format)) # <class 'tuple'>
 
 # numbers[0] = 10 # TypeError: 'tuple' object does not support item assignment
+
+# comprehensions lists
+squares = [i**2 for i in range(10)]
+print(squares)
