@@ -1,5 +1,5 @@
 # You can use the try-except block to handle exceptions in Python.
-# The try block contains the code that might throw an exception.
+# The try except contains the code that might throw an exception.
 # then you can use the except block to handle the exception.
 # You can use multiple except blocks to handle different exceptions.
 

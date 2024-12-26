@@ -7,3 +7,9 @@ print(x(5))
 
 even_numbers = list(filter(lambda x: x % 2 == 0, range(1, 11)))
 print(even_numbers)
+
+def is_odd(x):
+		return x % 2 != 0
+
+odd_numbers = list(filter(is_odd, range(1, 11)))
+print(odd_numbers)

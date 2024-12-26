@@ -1,22 +1,37 @@
-class Book:
+class Publication:
 		def __init__(self, title, author):
 			self.title = title
 			self.author = author
 			self.available = True
 
-		def borrow(self):
+		def borrow(self, itemName = ""):
 			if self.available:
-				print(f"Book {self.title} by {self.author} is borrowed")
+				print(f"{itemName} {self.title} by {self.author} is borrowed")
 				self.available = False
 			else:
-				print("Sorry, the book is not available")
+				print(f"Sorry, the {itemName} is not available")
 
-		def return_book(self):
+		def return_book(self, itemName = ""):
 			if not self.available:
-				print(f"Book {self.title} by {self.author} is returned")
+				print(f"{itemName} {self.title} by {self.author} is returned")
 				self.available = True
 			else:
-				print("The book is already available")
+				print(f"The {itemName} is already available")
+
+class Book(Publication):
+		def borrow(self):
+			super().borrow("Book")
+
+		def return_book(self):
+			super().return_book("Book")
+
+class Magazine(Publication):
+		def borrow(self):
+			if self.available:
+				print(f"Magazine {self.title} by {self.author} is borrowed")
+				self.available = False
+			else:
+				print("Sorry, the Magazine is not available")
 
 class User:
 		def __init__(self, name, user_id):
@@ -61,6 +76,8 @@ class Library :
 book1 = Book("The Alchemist", "Paulo Coelho")
 book2 = Book("The Da Vinci Code", "Dan Brown")
 book3 = Book("The Kite Runner", "Khaled Hosseini")
+
+magazine1 = Magazine("National Geographic", "National Geographic Society")
 
 user1 = User("Alice", 1)
 user2 = User("Bob", 2)
