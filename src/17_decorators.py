@@ -1,9 +1,8 @@
 # decorators are used to modify the behavior of function or class method without changing the code of the function or method itself.
-# decorators are used to add previous or post functionality to the function or method.
 # decorators are useful for:
 #   Modify Behavior Without Changing Code
-#   You can add behavior (like caching) to existing functions without editing their code. 
-#   This is especially helpful when working with third-party libraries or legacy code.
+#  	 	You can add behavior (like caching) to existing functions without editing their code. 
+#   	This is especially helpful when working with third-party libraries or legacy code.
 
 
 def log_transaction(func):
@@ -49,7 +48,6 @@ def check_access_privilege(privilege):
                 print("Access denied")
         return wrapper
     return check_access
-
 
 def log_action(func):
     def wrapper(employee):
