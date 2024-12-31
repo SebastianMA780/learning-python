@@ -3,6 +3,8 @@ class Publication:
 			self.title = title
 			self.author = author
 			self.available = True
+			self._protected = "protected variable" # this is protected and can be accessed outside the class. But it's a convention to not access it outside the class
+			self.__private = "private variable" # this is private and can't be accessed outside the class
 
 		def borrow(self, itemName = ""):
 			if self.available:
