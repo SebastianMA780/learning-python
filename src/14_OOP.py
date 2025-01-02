@@ -105,3 +105,22 @@ user3.borrow_book(book3)
 
 #show available books
 library.show_available_books()
+
+### Static and class methods ###
+class Order:
+
+	global_tax_rate = 100
+
+	#static methods allow to access the method without creating an object of the class
+	@staticmethod
+	def calculate_tax(amount, tax_rate):
+		return amount * ( tax_rate / 100 )
+	
+	#class methods allow to access the class variables without creating an object of the class
+	@classmethod
+	def change_global_tax_rate(cls, new_tax_rate):
+		cls.global_tax_rate = new_tax_rate
+
+print(Order.calculate_tax(100, 5))
+Order.change_global_tax_rate(10)
+print(Order.global_tax_rate)
