@@ -1,3 +1,7 @@
+# Concurrency is the ability to manage multiple requests at the same time. but not necessarily executing them simultaneously.
+# Instead the system switches between the requests
+# 	This is useful because if certain task is waiting the system can switch to another task and continue executing it.
+
 import threading
 import time
 
