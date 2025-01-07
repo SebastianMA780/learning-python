@@ -26,3 +26,17 @@ keys = information.keys()
 values = information.values()
 print(keys) # dict_keys(['name', 'age'])
 print(values) # dict_values(['John', 30]) 
+
+
+### -- Dictionary comprehensions -- ###
+# {key: value for item in iterable if condition}
+dict_v1 = {}
+for i in range(10):
+	if i % 2 == 0:
+		dict_v1[i] = i**2
+
+
+print('dict v1:', dict_v1)
+
+dict_v2 = {i: i**2 for i in range(10) if i % 2 == 0}
+print('dict v2:', dict_v2)
