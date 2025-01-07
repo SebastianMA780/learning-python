@@ -18,7 +18,11 @@ matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 print(type(matrix)) # <class 'list'>
 print(matrix[0][2])
 
-# Tuples: are similar to lists but they are immutable, meaning you can't change the values in a tuple
+
+
+### -- TUPLES -- ###
+# are similar to lists but they are immutable, meaning you can't change the values in a tuple
+
 numbers = (1, 2, 3, 4, 5)
 print(numbers)
 print(type(numbers)) # <class 'tuple'>
@@ -26,14 +30,9 @@ print(type(numbers)) # <class 'tuple'>
 numbers_tuple_format = 1, 2, 3, 4, 5
 print(numbers_tuple_format)
 print(type(numbers_tuple_format)) # <class 'tuple'>
-
 # numbers[0] = 10 # TypeError: 'tuple' object does not support item assignment
 
-## -- comprehensions lists -- ##
-# List comprehensions are a way to create lists in a more concise way
-# [expression for item in iterable if condition]
-squares = [i**2 for i in range(10) if i % 2 == 0]
-print(f'comprehensions list: {squares}') # [0, 4, 16, 36, 64]
+
 
 ### -- SETS -- ###
 # Sets are unordered collections of elements
@@ -57,3 +56,11 @@ new_set = set()
 new_set = countries.union(northAm, centralAm, southAm)
 
 print(new_set)
+
+
+
+## -- COMPREHENSION LISTS -- ##
+# List comprehensions are a way to create lists in a more concise way
+# [expression for item in iterable if condition]
+squares = [i**2 for i in range(10) if i % 2 == 0]
+print(f'comprehensions list: {squares}') # [0, 4, 16, 36, 64]
