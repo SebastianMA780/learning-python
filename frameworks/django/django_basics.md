@@ -16,7 +16,7 @@ Utiliza el modelo MVT (Model, View, Template).
 	- Es la capa de presentación
 	- Se encarga de mostrar los datos al usuario
 
-### Cómo interactuan las capas?
+### Cómo interactúan las capas?
 
 - El flujo de datos es el siguiente:
 	- El modelo pasa datos a la vista en un array.
